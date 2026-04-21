@@ -39,6 +39,7 @@ Todos os tokens estão definidos em `src/app/globals.css` via `@theme`. **Use se
 
 ## Estrutura de Pastas
 
+```
 src/
 ├── app/
 │   ├── globals.css          # Tokens e reset
@@ -46,7 +47,8 @@ src/
 │   └── page.tsx             # Página principal (monta as 4 seções)
 ├── components/
 ├── sections/                # Seções da landing (Hero, Services, CTA, CaseStudies)
-└── ui/                      # Componentes reutilizáveis (Button, Card, etc.)+
+└── ui/                      # Componentes reutilizáveis (Button, Card, etc.)
+```
 
 ## Convenções de Código
 

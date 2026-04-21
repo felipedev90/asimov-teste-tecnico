@@ -1,19 +1,14 @@
+import { Button } from "@/components/ui/Button";
+
 export default function Home() {
   return (
-    <main className="p-10 space-y-6">
-      <h1 className="text-h1 font-bold text-dark">
-        Navigating the digital landscape
-      </h1>
-      <h2 className="text-h2 text-dark">Heading 2 com tamanho certo</h2>
-      <p className="text-body text-dark">
-        Esse é um parágrafo de teste. A fonte deve estar Space Grotesk.
-      </p>
-      <button className="bg-primary text-dark px-6 py-3 rounded-xl font-medium">
-        Botão com cor primary
-      </button>
-      <div className="bg-dark text-primary p-6 rounded-2xl">
-        Card escuro com texto verde
-      </div>
+    <main className="p-10 flex flex-col gap-4 items-start">
+      <Button variant="primary">Book a consultation</Button>
+      <Button variant="secondary">Request a quote</Button>
+      <Button variant="accent">Learn more</Button>
+      <Button variant="primary" disabled>
+        Disabled
+      </Button>
     </main>
   );
 }
