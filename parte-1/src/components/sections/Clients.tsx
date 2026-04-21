@@ -1,12 +1,14 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { clients } from "@/data/clients";
 
-export default function Clients() {
+interface ClientsProps {
+  className?: string;
+}
+
+export default function Clients({ className }: ClientsProps) {
   return (
-    <section
-      aria-label="Nossos clientes"
-      className="flex items-center justify-between"
-    >
+    <section aria-label="Nossos clientes" className={cn("flex items-center justify-between", className)}>
       {clients.map((client) => (
         <Image
           key={client.name}
