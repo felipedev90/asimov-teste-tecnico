@@ -30,3 +30,11 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: parte-1
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+        working-directory: parte-1
+
+      - name: Run E2E tests
+        run: npx playwright test
+        working-directory: parte-1
