@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-between gap-10">
+    <section className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between">
       {/* Bloco de texto */}
-      <div className="flex max-w-[531px] flex-col">
+      <div className="flex w-full flex-col items-center text-center md:max-w-[531px] md:items-start md:text-left">
         <h1 className="text-h1 font-medium text-dark">
           Navigating the digital landscape for success
         </h1>
 
-        <p className="mt-[35px] max-w-[498px] text-body text-darkk">
+        <p className="mt-[35px] text-body text-darkk md:max-w-[498px]">
           Our digital marketing agency helps businesses grow and succeed online
           through a range of services including SEO, PPC, social media marketing,
           and content creation.
@@ -22,13 +22,14 @@ export default function Hero() {
       </div>
 
       {/* Ilustração */}
-      <div className="shrink-0">
+      <div className="w-full max-w-full md:w-auto md:shrink-0">
         <Image
           src="/images/hero-illustration.svg"
           alt="Ilustração de megafone com elementos decorativos representando marketing digital"
           width={600}
           height={515}
           priority
+          className="h-auto w-full md:h-auto md:w-[600px]"
         />
       </div>
     </section>
