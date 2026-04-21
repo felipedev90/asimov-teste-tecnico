@@ -53,7 +53,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           {service.titleLines.map((line) => (
             <span
               key={line}
-              className={cn("w-fit rounded-[7px] px-[7px]", styles.titleTag)}
+              className={cn("w-fit rounded-[7px] px-[7px] py-[5px]", styles.titleTag)}
             >
               {line}
             </span>
