@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { navLinks } from "@/data/navigation";
-import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +77,7 @@ export default function Header() {
 
       {/* Mobile menu aberto */}
       {isOpen && (
-        <nav className="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8 bg-dark md:hidden">
+        <nav className="fixed inset-0 z-100 flex flex-col items-center justify-center gap-8 bg-dark md:hidden">
           <button
             onClick={() => setIsOpen(false)}
             className="absolute right-[20px] top-[40px] flex flex-col justify-center gap-[5px] p-2"
