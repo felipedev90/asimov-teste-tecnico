@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Cores do Positivus */
+  --color-primary: #b9ff66;
+  --color-dark: #191a23;
+  --color-grey: #f3f3f3;
+  --color-black: #000000;
+  --color-white: #ffffff;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Fonte */
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Tipografia — Desktop */
+  --text-h1: 3.75rem;
+  --text-h1--line-height: 1;
+  --text-h2: 2.5rem;
+  --text-h2--line-height: 1;
+  --text-h3: 1.875rem;
+  --text-h3--line-height: 1;
+  --text-h4: 1.25rem;
+  --text-h4--line-height: 1;
+  --text-body: 1.125rem;
+  --text-body--line-height: 1.4;
+
+  /* Tipografia — Mobile */
+  --text-h1-mobile: 2.6875rem;
+  --text-h1-mobile--line-height: 1;
+  --text-h2-mobile: 2.25rem;
+  --text-h2-mobile--line-height: 1;
+  --text-h3-mobile: 1.625rem;
+  --text-h3-mobile--line-height: 1;
+  --text-h4-mobile: 1.125rem;
+  --text-h4-mobile--line-height: 1;
+  --text-body-mobile: 1rem;
+  --text-body-mobile--line-height: 1.5;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  background: var(--color-white);
 }
