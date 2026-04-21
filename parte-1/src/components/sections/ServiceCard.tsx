@@ -71,6 +71,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
             alt=""
             width={41}
             height={41}
+            loading="lazy"
             aria-hidden="true"
           />
           <span className={cn("text-body", learnMoreColor)}>Learn more</span>
@@ -83,6 +84,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         width={210}
         height={170}
         aria-hidden="true"
+        loading="lazy"
         className="mt-4 w-[150px] md:mt-0 md:w-[210px]"
       />
     </article>

@@ -31,6 +31,7 @@ export default function CTA({ className }: CTAProps) {
             width={494}
             height={394}
             aria-hidden="true"
+            loading="lazy"
             className="h-auto max-w-[280px] md:h-[394px] md:max-w-none md:w-[494px]"
           />
         </div>

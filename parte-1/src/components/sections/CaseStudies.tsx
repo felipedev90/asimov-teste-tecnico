@@ -39,6 +39,7 @@ export default function CaseStudies({ className }: CaseStudiesProps) {
                     width={24}
                     height={24}
                     aria-hidden="true"
+                    loading="lazy"
                   />
                 </Link>
               </div>
