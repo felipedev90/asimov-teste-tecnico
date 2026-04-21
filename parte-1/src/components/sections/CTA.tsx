@@ -12,7 +12,7 @@ export default function CTA({ className }: CTAProps) {
         {/* Texto */}
         <div className="flex max-w-full flex-col gap-[26px] md:max-w-[500px]">
           <h2 className="text-h2-mobile font-medium text-dark md:text-h2">
-            Let's make things happen
+            Let&apos;s make things happen
           </h2>
           <p className="text-body text-dark">
             Contact us today to learn more about how our digital marketing
