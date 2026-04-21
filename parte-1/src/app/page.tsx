@@ -1,14 +1,12 @@
-import { Button } from "@/components/ui/Button";
+import Header from "@/components/layout/Header";
 
 export default function Home() {
   return (
-    <main className="p-10 flex flex-col gap-4 items-start">
-      <Button variant="primary">Book a consultation</Button>
-      <Button variant="secondary">Request a quote</Button>
-      <Button variant="accent">Learn more</Button>
-      <Button variant="primary" disabled>
-        Disabled
-      </Button>
-    </main>
+    <div className="mx-auto max-w-[1440px] px-[100px] pt-[60px]">
+      <Header />
+      <main className="mt-[70px]">
+        <p>Página em construção...</p>
+      </main>
+    </div>
   );
 }
