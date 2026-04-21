@@ -7,7 +7,7 @@ import CaseStudies from "@/components/sections/CaseStudies";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-[1440px] px-[100px] pt-[60px]">
+    <div className="mx-auto max-w-[1440px] px-[20px] pt-[40px] md:px-[100px] md:pt-[60px]">
       <Header />
       <main className="mt-[70px] pb-[70px]">
         <Hero />

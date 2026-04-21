@@ -8,7 +8,7 @@ interface ClientsProps {
 
 export default function Clients({ className }: ClientsProps) {
   return (
-    <section aria-label="Nossos clientes" className={cn("flex items-center justify-between", className)}>
+    <section aria-label="Nossos clientes" className={cn("grid grid-cols-3 gap-6 md:flex md:items-center md:justify-between", className)}>
       {clients.map((client) => (
         <Image
           key={client.name}

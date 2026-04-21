@@ -39,13 +39,14 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   return (
     <article
       className={cn(
-        "flex h-[310px] w-[600px] items-center justify-between",
-        "rounded-[45px] border border-dark p-[50px]",
+        "flex w-full flex-col items-center justify-between h-auto p-[30px]",
+        "md:h-[310px] md:w-[600px] md:flex-row md:items-center md:p-[50px]",
+        "rounded-[45px] border border-dark",
         "shadow-[0_5px_0_0_#191A23]",
         styles.card,
       )}
     >
-      <div className="flex h-full w-[221px] flex-col justify-between">
+      <div className="flex h-full w-full flex-col items-center justify-between gap-4 md:w-[221px] md:items-start">
         <h3
           className="flex flex-col text-h3 font-medium"
           aria-label={service.title}
@@ -82,6 +83,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         width={210}
         height={170}
         aria-hidden="true"
+        className="mt-4 w-[150px] md:mt-0 md:w-[210px]"
       />
     </article>
   );
