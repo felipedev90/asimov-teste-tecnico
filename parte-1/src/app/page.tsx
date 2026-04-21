@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import Clients from "@/components/sections/Clients";
 import Services from "@/components/sections/Services";
+import CTA from "@/components/sections/CTA";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Clients className="mt-[70px]" />
         <Services className="mt-[140px]" />
+        <CTA className="mt-[70px]" />
       </main>
     </div>
   );
