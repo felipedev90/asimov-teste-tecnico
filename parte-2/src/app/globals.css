@@ -1,75 +1,84 @@
-/* 1. Importa o Tailwind v4 */
 @import "tailwindcss";
-    
+
 @theme {
+  /* ── Backgrounds ─────────────────────────────── */
+  --color-bg-primary: #080e1a;
+  --color-bg-card: #0d1425;
+  --color-bg-card-hover: #111a30;
 
-  /* ── Cores de fundo ── */
-  --color-bg:           #0A0B0D; /* bg principal da página */
-  --color-bg-elevated:  #12141A; /* cards elevados (ex: terminal title bar) */
-  --color-bg-subtle:    #16181F; /* painéis sutilmente mais claros */
+  /* ── Brand ───────────────────────────────────── */
+  --color-brand-cyan: #06b6d4;
+  --color-brand-cyan-light: #22d3ee;
+  --color-brand-sky: #0ea5e9;
 
-  /* ── Bordas ── */
-  --color-border-subtle: #1F2229; /* divisórias quase invisíveis */
-  --color-border-strong: #2A2D36; /* bordas visíveis (ex: terminal frame) */
+  /* ── Accent ──────────────────────────────────── */
+  --color-accent-orange: #f97316;
+  --color-accent-orange-light: #fb923c;
 
-  /* ── Texto ── */
-  --color-fg:       #FAFAFA; /* texto principal */
-  --color-fg-muted: #A1A1AA; /* texto secundário (nav links, subhead) */
-  --color-fg-subtle:#6E7681; /* texto terciário (line numbers, labels) */
+  /* ── Status ──────────────────────────────────── */
+  --color-success: #10b981;
+  --color-success-light: #34d399;
 
-  /* ── Accents ── */
-  --color-accent-teal:   #00D4BE; /* CTAs, arrows, links, barras */
-  --color-accent-orange: #E8672A; /* eyebrow, destaque Python/IA na headline */
+  /* ── Text ────────────────────────────────────── */
+  --color-ink-primary: #ffffff;
+  --color-ink-secondary: #cbd5e1;
+  --color-ink-muted: #94a3b8;
+  --color-ink-subtle: #64748b;
+  --color-ink-code-comment: #475569;
 
-  /* ── Fontes ── */
-  --font-sans: var(--font-geist), system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), 'Courier New', monospace;
-  --font-logo: var(--font-voltaire), sans-serif;
+  /* ── Fonts ───────────────────────────────────── */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
-/* ── Keyframes globais ──────────────────────────────────────
-   Ficam aqui (fora do @theme) porque são animações CSS puras,
-   não tokens Tailwind.                                        */
-
-/* Fundo drifting — move o container duplo pra cima continuamente */
-@keyframes codeDrift {
-  from { transform: translateY(0);    }
-  to   { transform: translateY(-50%); } /* -50% porque o container tem height:200% */
-}
-
-/* Cursor do terminal — pisca com step-end (digital, não suave) */
-@keyframes cursorBlink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
-}
-
-/* ── Base global ────────────────────────────────────────────── */
-
-/* box-sizing global — evita que padding/border "empurrem" o layout */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
+/* ── Base reset ──────────────────────────────────── */
 html {
-  /* Suaviza a renderização das fontes em displays retina/Mac.
-     Sem isso, a Geist pode parecer "grossa" em dark backgrounds. */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #0A0B0D; /* token ainda não disponível aqui, usa hex direto */
-  color: #FAFAFA;
-  overflow-x: hidden; /* evita scroll horizontal por blobs/elementos absolutos */
+  background-color: var(--color-bg-primary);
+  color: var(--color-ink-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Respeita preferência do sistema por animações reduzidas.
-   Pessoas com epilepsia fotossensível, vestibulopatia, etc.
-   Boa prática + acessibilidade + critério de Lighthouse.       */
+/* ── Keyframes ───────────────────────────────────── */
+@keyframes shimmer-text {
+  0%   { background-position: 200% center; }
+  100% { background-position: -100% center; }
+}
+
+@keyframes float-a {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes float-b {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(8px); }
+}
+
+@keyframes float-c {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes float-d {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(10px); }
+}
+
+/* ── Respect user preferences ───────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 1ms !important;
-    animation-delay:    0ms !important;
-    transition-duration: 1ms !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
