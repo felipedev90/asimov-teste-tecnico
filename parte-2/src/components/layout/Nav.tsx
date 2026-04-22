@@ -46,13 +46,13 @@ export function Nav() {
       </ul>
 
       {/* Login */}
-      <Button
-        href="#login"
-        variant="secondary"
-        className="border border-white/[0.07] px-6 py-2 hover:border-white/[0.07] hover:bg-white/[0.07] hover:text-white"
-      >
-        Login
-      </Button>
+    <Button
+      href="#login"
+      variant="ghost"
+      className="px-6 py-3"
+    >
+      Login
+    </Button>
     </nav>
   );
 }
