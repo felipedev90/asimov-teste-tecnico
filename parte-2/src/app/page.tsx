@@ -15,6 +15,7 @@ export default function Home() {
         {/* Badge */}
         <div>
           <Badge>{heroCopy.eyebrow}</Badge>
+
         </div>
 
         {/* ShimmerText */}
