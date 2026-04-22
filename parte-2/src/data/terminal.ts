@@ -33,7 +33,7 @@ export interface OutputBar {
 }
 
 export const OUTPUT_BARS: OutputBar[] = [
-  { label: 'Q1 2025', pct: 68,  val: 'R$ 342k' },
-  { label: 'Q2 2025', pct: 84,  val: 'R$ 418k' },
-  { label: 'Q3 2025', pct: 100, val: 'R$ 501k' },
+  { label: 'Q1 2026', pct: 68,  val: 'R$ 342k' },
+  { label: 'Q2 2026', pct: 84,  val: 'R$ 418k' },
+  { label: 'Q3 2026', pct: 100, val: 'R$ 501k' },
 ]
