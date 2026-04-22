@@ -48,14 +48,6 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} — Aprenda Python do zero com IA`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -63,7 +55,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     creator: siteConfig.twitter.handle,
     site: siteConfig.twitter.site,
-    images: [siteConfig.ogImage],
   },
   robots: {
     index: true,
