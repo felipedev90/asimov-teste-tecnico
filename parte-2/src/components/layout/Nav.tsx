@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
 import { navItems } from "@/data/nav";
+import { Button } from "@/components/ui/Button";
 
 export function Nav() {
   return (
@@ -18,19 +19,9 @@ export function Nav() {
     >
       {/* Wordmark */}
       <Link href="/" className="flex items-center gap-3" aria-label="Asimov Academy — Início">
-        <span
-          aria-hidden="true"
-          className={cn(
-            "flex size-9 items-center justify-center rounded-lg",
-            "bg-linear-to-br from-brand-cyan-light to-brand-sky",
-            "text-sm font-black text-bg-primary"
-          )}
-        >
-          A
-        </span>
         <span className="font-display leading-tight">
-          <span className="block text-sm font-bold text-ink-primary">Asimov</span>
-          <span className="block text-xs font-normal text-ink-muted">Academy</span>
+          <span className="block text-xl md:text-2xl lg:text-3xl text-ink-primary uppercase">Asimov</span>
+         
         </span>
       </Link>
 
@@ -55,16 +46,13 @@ export function Nav() {
       </ul>
 
       {/* Login */}
-      <Link
+      <Button
         href="#login"
-        className={cn(
-          "text-sm font-medium text-ink-muted",
-          "transition-colors hover:text-ink-primary",
-          "focus-visible:outline-none focus-visible:text-ink-primary"
-        )}
+        variant="secondary"
+        className="border border-white/[0.07] px-6 py-2 hover:border-white/[0.07] hover:bg-white/[0.07] hover:text-white"
       >
         Login
-      </Link>
+      </Button>
     </nav>
   );
 }

@@ -20,7 +20,7 @@ export function HeroContent() {
           "mb-5 font-extrabold tracking-tight",
           "text-4xl leading-[1.15]",
           "md:text-5xl md:leading-[1.1]",
-          "xl:text-[3.75rem]"
+          "lg:text-[4.3rem]"
         )}
       >
         {headline.map((segment, i) => (
