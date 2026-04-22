@@ -8,13 +8,13 @@ export function HeroBackground() {
     >
       {/* Plexus network image */}
       <Image
-        src="/background.webp"
+        src="/background_hero.webp"
         alt=""
         fill
         priority
         quality={60}
         sizes="100vw"
-        className="object-cover object-center opacity-[0.02] "
+        className="object-cover object-center opacity-[0.15] "
       />
 
       {/* Ambient glows */}
