@@ -31,4 +31,16 @@ export const siteConfig = {
     handle: "@asimov_academy",
     site: "@asimov_academy",
   },
+  course: {
+    name: "Aprenda Python do zero e construa projetos reais com IA",
+    description:
+      "Curso prático e completo de Python integrado com Inteligência Artificial. +40 horas de conteúdo, projetos reais desde o módulo 1, suporte de comunidade com mais de 20.000 alunos e certificado reconhecido pelo mercado.",
+    provider: {
+      name: "Asimov Academy",
+      url: "https://asimov.academy",
+    },
+    inLanguage: "pt-BR",
+    hoursContent: 40,
+    numberOfStudents: 20000,
+  },
 } as const;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Voltaire } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
+import { StructuredData } from "@/components/seo/StructuredData";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -82,7 +83,10 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} ${voltaire.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <StructuredData />
+        {children}
+      </body>
     </html>
   );
 }
