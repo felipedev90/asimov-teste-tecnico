@@ -20,7 +20,7 @@ export function Nav() {
       {/* Wordmark */}
       <Link href="/" className="flex items-center gap-3" aria-label="Asimov Academy — Início">
         <span className="font-display leading-tight">
-          <span className="block text-2xl md:text-3xl lg:text-4xl text-ink-primary uppercase">Asimov</span>
+          <span className="block text-xl md:text-3xl lg:text-4xl text-ink-primary uppercase">Asimov</span>
          
         </span>
       </Link>
