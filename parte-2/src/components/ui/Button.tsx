@@ -3,7 +3,7 @@ import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
 import type { LucideIcon } from "lucide-react";
 
-type ButtonVariant = "primary" | "secondary";
+type ButtonVariant = "primary" | "secondary" | "ghost";
 
 type ButtonProps = {
   href: string;
@@ -23,6 +23,10 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary: cn(
     "border border-brand-cyan/40 text-brand-cyan-light bg-transparent",
     "hover:bg-brand-cyan/10 hover:border-brand-cyan/60"
+  ),
+  ghost: cn(
+    "border border-white/10 text-ink-secondary bg-transparent",
+    "hover:bg-white/5 hover:border-white/20 hover:text-ink-primary"
   ),
 };
 
