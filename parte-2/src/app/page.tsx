@@ -1,10 +1,12 @@
+import { Nav } from '@/components/layout/Nav'
+
 export default function Home() {
   return (
-
-    <main className="min-h-screen bg-bg flex items-center justify-center">
-      <p className="text-fg font-logo text-lg">Asimov Hero — Sprint 1 ✓</p>
-      <p className="text-fg font-mono text-lg">Asimov Hero — Sprint 1 ✓</p>
-      <p className="text-fg font-sans text-lg">Asimov Hero — Sprint 1 ✓</p>
+    <main className="min-h-screen bg-bg">
+      <Nav />
+      <section className="min-h-screen flex items-center justify-center pt-16">
+        <p className="text-fg-muted font-logo text-sm">Hero em construção…</p>
+      </section>
     </main>
   )
 }
