@@ -1,44 +1,47 @@
 import type { Metadata } from 'next'
-import { Inter_Tight, JetBrains_Mono, Voltaire } from 'next/font/google'
+import { Geist, JetBrains_Mono, Voltaire } from 'next/font/google'
 import './globals.css'
 
-const interTight = Inter_Tight({
+
+
+const geist = Geist({
   subsets: ['latin'],
-  variable: '--font-inter-tight',
+  variable: '--font-geist', 
   display: 'swap',
 })
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
+  variable: '--font-jetbrains',
   display: 'swap',
 })
 
 const voltaire = Voltaire({
   subsets: ['latin'],
-  weight: '400',
+  weight: '400',              
   variable: '--font-voltaire',
   display: 'swap',
 })
 
+
 export const metadata: Metadata = {
-  title: 'Aprenda Python do zero | Asimov Academy',
+  title: 'Aprenda Python com IA | Asimov Academy',
   description: 'O curso mais prático do Brasil para quem quer entrar em tecnologia sem enrolação.',
+  openGraph: {
+    title: 'Aprenda Python com IA | Asimov Academy',
+    description: 'O curso mais prático do Brasil para quem quer entrar em tecnologia sem enrolação.',
+    type: 'website',
+  },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="pt-BR">
-      <body
-        className={`
-          ${interTight.variable}
-          ${jetbrainsMono.variable}
-          ${voltaire.variable}
-          font-sans bg-bg text-fg antialiased
-        `}
-      >
-        {children}
-      </body>
+    <html lang="pt-BR" className={`${geist.variable} ${jetbrainsMono.variable} ${voltaire.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }
