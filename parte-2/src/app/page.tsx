@@ -1,10 +1,11 @@
-import { Nav } from '@/components/layout/Nav'
-import { Eyebrow } from '@/components/hero/Eyebrow'
-import { Headline } from '@/components/hero/Headline'
-import { Subhead } from '@/components/hero/Subhead'
+import { Nav }       from '@/components/layout/Nav'
+import { Eyebrow }   from '@/components/hero/Eyebrow'
+import { Headline }  from '@/components/hero/Headline'
+import { Subhead }   from '@/components/hero/Subhead'
 import { BulletList } from '@/components/hero/BulletList'
-import { CTAs } from '@/components/hero/CTAs'
-import { Trust } from '@/components/hero/Trust'
+import { CTAs }      from '@/components/hero/CTAs'
+import { Trust }     from '@/components/hero/Trust'
+import { Terminal }  from '@/components/hero/Terminal'
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
               <Trust />
             </div>
             <div className="w-full md:flex-1 mt-10 md:mt-0">
-              
+              <Terminal />
             </div>
           </div>
 
