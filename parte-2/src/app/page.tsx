@@ -1,15 +1,33 @@
 import { Nav } from '@/components/layout/Nav'
 import { Eyebrow } from '@/components/hero/Eyebrow'
 import { Headline } from '@/components/hero/Headline'
+import { Subhead } from '@/components/hero/Subhead'
+import { BulletList } from '@/components/hero/BulletList'
+import { CTAs } from '@/components/hero/CTAs'
+import { Trust } from '@/components/hero/Trust'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-bg">
       <Nav />
       <section className="min-h-screen pt-16 flex items-center">
-        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-16">
+        <div className="w-full max-w-[1280px] mx-auto px-6 md:px-12 py-12 md:py-16">
+
           <Eyebrow />
           <Headline />
+
+          <div className="flex flex-col md:flex-row md:gap-[140px] md:items-start">
+            <div className="w-full md:w-[44%] md:shrink-0">
+              <Subhead />
+              <BulletList />
+              <CTAs />
+              <Trust />
+            </div>
+            <div className="w-full md:flex-1 mt-10 md:mt-0">
+              
+            </div>
+          </div>
+
         </div>
       </section>
     </main>
