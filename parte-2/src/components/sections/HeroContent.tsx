@@ -17,8 +17,8 @@ export function HeroContent() {
       {/* Headline */}
       <h1
         className={cn(
-          "mb-5 font-extrabold tracking-tight",
-          "text-4xl leading-[1.15]",
+          "mb-5 font-extrabold tracking-tight text-balance",
+          "text-[2.65rem] leading-[1.15]",
           "md:text-5xl md:leading-[1.1]",
           "lg:text-[4.3rem]"
         )}
@@ -55,13 +55,14 @@ export function HeroContent() {
       </ul>
 
       {/* CTAs */}
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
         {ctas.map((cta, i) => (
           <Button
             key={cta.label}
             href={cta.href}
             variant={cta.variant}
             icon={i === 0 ? ArrowRight : undefined}
+            className="w-full sm:w-auto"
           >
             {cta.label}
           </Button>
