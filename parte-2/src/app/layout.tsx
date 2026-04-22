@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Voltaire } from "next/font/google";
+import { Geist, Geist_Mono, Voltaire } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const geistSans = Geist({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-geist-sans",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-jetbrains",
+  variable: "--font-geist-mono",
 });
 
 const voltaire = Voltaire({
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${jetbrainsMono.variable} ${voltaire.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${voltaire.variable}`}
     >
       <body>{children}</body>
     </html>
