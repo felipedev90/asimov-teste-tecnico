@@ -8,7 +8,7 @@ export function HeroSection() {
     <section
       className={cn(
         "relative isolate overflow-hidden",
-        "px-4 py-16 md:px-8 md:py-20 lg:px-20 lg:py-24",
+        "px-4 py-10 md:px-8 md:py-16 lg:px-20 lg:py-24",
         "min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-72px)]"
       )}
     >
