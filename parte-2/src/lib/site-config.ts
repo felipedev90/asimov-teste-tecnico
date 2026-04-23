@@ -5,7 +5,7 @@ export const siteConfig = {
   titleTemplate: "%s | Asimov Academy",
   description:
     "O curso mais prático do Brasil para quem quer entrar em tecnologia sem enrolação. +40 horas, projetos com IA desde o módulo 1, certificado reconhecido.",
-  url: "https://asimov-hero.vercel.app",
+  url: "https://asimov-hero-felipe-augusto.vercel.app/",
   ogImage: "/og-image.png",
   locale: "pt_BR",
   keywords: [
@@ -45,6 +45,7 @@ export const siteConfig = {
   },
   whatsapp: {
     phoneNumber: "5511900000000",
-    message: "Oi! Vim pelo site e quero saber mais sobre o curso de Python com IA.",
+    message:
+      "Oi! Vim pelo site e quero saber mais sobre o curso de Python com IA.",
   },
 } as const;
