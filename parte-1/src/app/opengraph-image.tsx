@@ -43,7 +43,7 @@ export default async function OpengraphImage() {
             fontWeight: 700,
           }}
         >
-          ★
+          P
         </div>
         <span
           style={{
