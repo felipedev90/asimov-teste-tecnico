@@ -10,10 +10,10 @@ export default function Hero() {
           Navigating the digital landscape for success
         </h1>
 
-        <p className="mt-[35px] text-body text-darkk md:max-w-[498px]">
+        <p className="mt-[35px] text-body text-dark md:max-w-[498px]">
           Our digital marketing agency helps businesses grow and succeed online
-          through a range of services including SEO, PPC, social media marketing,
-          and content creation.
+          through a range of services including SEO, PPC, social media
+          marketing, and content creation.
         </p>
 
         <Button variant="primary" className="mt-[35px] w-fit">
