@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Voltaire } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
 import { StructuredData } from "@/components/seo/StructuredData";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -86,6 +87,7 @@ export default function RootLayout({
       <body>
         <StructuredData />
         {children}
+        <WhatsAppFloat />
       </body>
     </html>
   );
