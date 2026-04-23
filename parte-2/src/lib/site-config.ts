@@ -43,4 +43,8 @@ export const siteConfig = {
     hoursContent: 40,
     numberOfStudents: 20000,
   },
+  whatsapp: {
+    phoneNumber: "5511900000000",
+    message: "Oi! Vim pelo site e quero saber mais sobre o curso de Python com IA.",
+  },
 } as const;
