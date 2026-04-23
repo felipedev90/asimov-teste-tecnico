@@ -1,17 +1,18 @@
 ﻿# Teste Técnico — Asimov Academy
 
-Teste técnico para a vaga de Designer/Frontend Dev.
+Candidato: Felipe Augusto da Silva · Vaga: Designer / Frontend Dev
 
-## Estrutura
+- **Parte 1** — Reprodução fiel do Figma Positivus · [`/parte-1`](./parte-1) · [live](https://asimov-teste-tecnico-felipe-augusto.vercel.app/)
+- **Parte 2** — Hero criada do zero para curso Python + IA · [`/parte-2`](./parte-2) · [live](https://asimov-hero-felipe-augusto.vercel.app/)
 
-- /parte-1 — Reprodução das 4 primeiras seções do Figma da landing page Positivus.
-- /parte-2 — Seção hero criada do zero para landing page de curso de Python.
+## Ferramentas de IA utilizadas
 
-## Deploy
+Claude (Anthropic) como par arquitetural e revisor de código; Antigravity com Claude/Gemini para edições em lote e geração de testes; Claude Design para exploração de referência visual inicial. Colaboração documentada em `AGENTS.md` de cada parte, com escopo explícito por prompt, obrigação de leitura prévia dos arquivos e validação humana em cada checkpoint.
 
-- Parte 1: _(a ser adicionado)_
-- Parte 2: _(a ser adicionado)_
+## Onde a IA ajudou mais
 
-## Autor
+Scaffold inicial e geração de boilerplate (Next.js, Tailwind tokens, componentes base); geração da suíte de testes Vitest (32 testes, 100% de coverage no escopo); refinamento de ajustes responsivos; debug guiado de edge cases (Satori CSS subset, `prefers-reduced-motion`); extração de padrões entre os dois projetos.
 
-Felipe Silva — [LinkedIn](https://linkedin.com/in/felipesilva90/)
+## O que ajustei manualmente e por quê
+
+Todas as decisões arquiteturais (design tokens semânticos, separação de Server Components, estratégia de coverage escopada, schemas JSON-LD específicos por contexto), calibração visual pixel-a-pixel contra o Figma na Parte 1, microinterações (shimmer com intervalo entre ciclos, animations floats), e revisão completa de cada output gerado, em nenhum momento aceitei código sem leitura e validação do diff.
