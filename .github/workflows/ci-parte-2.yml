@@ -1,0 +1,57 @@
+name: CI — parte-2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "parte-2/**"
+      - ".github/workflows/ci-parte-2.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "parte-2/**"
+      - ".github/workflows/ci-parte-2.yml"
+
+concurrency:
+  group: ci-parte-2-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Lint, test & build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: parte-2/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: parte-2
+
+      - name: Lint
+        run: npm run lint
+        working-directory: parte-2
+
+      - name: Run unit tests with coverage
+        run: npm run test:coverage
+        working-directory: parte-2
+
+      - name: Build
+        run: npm run build
+        working-directory: parte-2
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-parte-2
+          path: parte-2/coverage
+          retention-days: 7

@@ -1,13 +1,24 @@
-name: CI
+name: CI — parte-1
 
 on:
   push:
     branches: [main]
+    paths:
+      - "parte-1/**"
+      - ".github/workflows/ci-parte-1.yml"
   pull_request:
     branches: [main]
+    paths:
+      - "parte-1/**"
+      - ".github/workflows/ci-parte-1.yml"
+
+concurrency:
+  group: ci-parte-1-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
+    name: Lint, build & E2E
     runs-on: ubuntu-latest
 
     steps:
