@@ -9,8 +9,8 @@ Teste técnico para a vaga de Designer/Frontend Dev.
 
 ## Deploy
 
-- Parte 1: _(a ser adicionado)_
-- Parte 2: _(a ser adicionado)_
+- Parte 1: [Positivus - Landing Page](https://asimov-teste-tecnico-felipe-augusto.vercel.app/)
+- Parte 2: [Curso de Python - Hero](https://asimov-hero-felipe-augusto.vercel.app/)
 
 ## Autor
 
