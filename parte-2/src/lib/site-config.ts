@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Asimov Academy",
   shortName: "Asimov",
-  title: "Asimov Academy — Aprenda Python do zero com IA",
+  title: "Asimov Academy - Aprenda Python do zero com IA",
   titleTemplate: "%s | Asimov Academy",
   description:
     "O curso mais prático do Brasil para quem quer entrar em tecnologia sem enrolação. +40 horas, projetos com IA desde o módulo 1, certificado reconhecido.",
