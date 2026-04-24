@@ -14,14 +14,19 @@ export function Nav() {
         "flex items-center justify-between",
         "h-16 md:h-[72px]",
         "px-4 md:px-8 lg:px-20",
-        "border-b border-white/[0.07]"
+        "border-b border-white/[0.07]",
       )}
     >
       {/* Wordmark */}
-      <Link href="/" className="flex items-center gap-3" aria-label="Asimov Academy — Início">
+      <Link
+        href="/"
+        className="flex items-center gap-3"
+        aria-label="Asimov Academy — Início"
+      >
         <span className="font-display leading-tight">
-          <span className="block text-xl md:text-3xl lg:text-4xl text-ink-primary uppercase">Asimov</span>
-         
+          <span className="block text-2xl md:text-3xl lg:text-4xl text-ink-primary uppercase">
+            Asimov
+          </span>
         </span>
       </Link>
 
@@ -35,24 +40,22 @@ export function Nav() {
                 "flex items-center gap-1",
                 "text-sm font-medium text-ink-muted",
                 "transition-colors hover:text-ink-primary",
-                "focus-visible:outline-none focus-visible:text-ink-primary"
+                "focus-visible:outline-none focus-visible:text-ink-primary",
               )}
             >
               {item.label}
-              {item.hasDropdown && <Icon icon={ChevronDown} className="size-3" />}
+              {item.hasDropdown && (
+                <Icon icon={ChevronDown} className="size-3" />
+              )}
             </Link>
           </li>
         ))}
       </ul>
 
       {/* Login */}
-    <Button
-      href="#login"
-      variant="ghost"
-      className="px-6 py-3"
-    >
-      Login
-    </Button>
+      <Button href="#login" variant="ghost" className="px-6 py-3">
+        Login
+      </Button>
     </nav>
   );
 }

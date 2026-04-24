@@ -18,9 +18,9 @@ export function HeroContent() {
       <h1
         className={cn(
           "mb-5 font-extrabold tracking-tight text-balance",
-          "text-[2.65rem] leading-[1.15]",
+          "text-[3.1rem] leading-[1.15]",
           "md:text-5xl md:leading-[1.1]",
-          "lg:text-[4.3rem]"
+          "lg:text-[3.75rem] xl:text-[4.5rem]",
         )}
       >
         {headline.map((segment, i) => (
@@ -39,7 +39,7 @@ export function HeroContent() {
           "mb-8 md:mb-9",
           "max-w-[460px]",
           "text-base md:text-lg",
-          "leading-relaxed text-ink-muted"
+          "leading-relaxed text-ink-muted",
         )}
       >
         {subheadline}
@@ -62,7 +62,7 @@ export function HeroContent() {
             href={cta.href}
             variant={cta.variant}
             icon={i === 0 ? ArrowRight : undefined}
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto sm:min-w-[220px]"
           >
             {cta.label}
           </Button>
