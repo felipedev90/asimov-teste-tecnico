@@ -47,7 +47,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       )}
     >
       <div className="flex h-full w-full min-w-0 flex-1 flex-col items-center justify-between gap-4 md:items-start">
-        <h3
+        <h2
           className="flex flex-col text-h3 font-medium"
           aria-label={service.title}
         >
@@ -62,7 +62,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
               {line}
             </span>
           ))}
-        </h3>
+        </h2>
 
         <Link
           href={service.href}
