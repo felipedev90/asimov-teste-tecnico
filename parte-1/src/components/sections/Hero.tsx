@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between">
+    <section className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between">
       {/* Bloco de texto */}
       <div className="flex w-full flex-col items-center text-center md:max-w-[531px] md:items-start md:text-left">
         <h1 className="text-h1 font-medium text-dark">
@@ -29,7 +29,7 @@ export default function Hero() {
           width={600}
           height={515}
           priority
-          className="h-auto w-full md:h-auto md:w-[600px]"
+          className="h-auto w-full md:w-[480px] lg:w-[540px] xl:w-[600px]"
         />
       </div>
     </section>

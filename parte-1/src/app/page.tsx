@@ -8,11 +8,11 @@ import { FadeIn } from "@/components/ui/FadeIn";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-[1440px] px-[20px] pt-[40px] md:px-[100px] md:pt-[60px]">
+    <div className="mx-auto max-w-[1440px] px-[20px] pt-[40px] md:px-[40px] md:pt-[30px] lg:px-[60px] xl:px-[100px]">
       <Header />
       <main className="mt-[70px] pb-[70px]">
         <FadeIn>
-        <Hero />
+          <Hero />
           <Clients className="mt-[70px]" />
         </FadeIn>
         <FadeIn>
