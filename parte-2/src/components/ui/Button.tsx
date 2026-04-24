@@ -18,15 +18,15 @@ const variantStyles: Record<ButtonVariant, string> = {
     "bg-brand-cyan text-bg-primary",
     "shadow-[0_0_24px_rgba(6,182,212,0.35)]",
     "hover:shadow-[0_4px_32px_rgba(6,182,212,0.55)]",
-    "hover:brightness-110"
+    "hover:brightness-110",
   ),
   secondary: cn(
     "border border-brand-cyan/40 text-brand-cyan-light bg-transparent",
-    "hover:bg-brand-cyan/10 hover:border-brand-cyan/60"
+    "hover:bg-brand-cyan/10 hover:border-brand-cyan/60",
   ),
   ghost: cn(
     "border border-white/10 text-ink-secondary bg-transparent",
-    "hover:bg-white/5 hover:border-white/20 hover:text-ink-primary"
+    "hover:bg-white/5 hover:border-white/20 hover:text-ink-primary",
   ),
 };
 
@@ -48,7 +48,7 @@ export function Button({
         "hover:-translate-y-0.5",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan-light focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary",
         variantStyles[variant],
-        className
+        className,
       )}
     >
       {children}

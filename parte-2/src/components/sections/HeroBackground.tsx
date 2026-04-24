@@ -14,7 +14,7 @@ export function HeroBackground() {
         priority
         quality={75}
         sizes="100vw"
-        className="object-cover object-center opacity-[0.15] "
+        className="object-cover object-[78%_0] xl:object-center opacity-[0.1] md:opacity-[0.15] "
       />
 
       {/* Ambient glows */}

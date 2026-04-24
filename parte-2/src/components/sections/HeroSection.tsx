@@ -8,8 +8,8 @@ export function HeroSection() {
     <section
       className={cn(
         "relative isolate overflow-hidden",
-        "px-4 py-10 md:px-8 md:py-16 lg:px-20 lg:py-24",
-        "min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-72px)]"
+        "px-4 py-10 md:px-8 md:py-16 lg:px-10 xl:px-20 lg:py-24",
+        "min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-72px)]",
       )}
     >
       <HeroBackground />
@@ -17,9 +17,9 @@ export function HeroSection() {
       <div
         className={cn(
           "relative z-10",
-          "grid grid-cols-1 items-center gap-12",
-          "lg:grid-cols-2 lg:gap-16",
-          "mx-auto max-w-[1280px]"
+          "grid grid-cols-1 items-center gap-12 md:gap-2",
+          "lg:grid-cols-2 lg:gap-20",
+          "mx-auto max-w-[1280px]",
         )}
       >
         <HeroContent />
