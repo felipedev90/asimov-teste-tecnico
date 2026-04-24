@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="relative w-full">
       {/* Desktop */}
-      <div className="hidden h-[68px] items-center justify-between md:flex">
+      <div className="hidden h-[68px] items-center justify-between lg:flex">
         <Link href="/" aria-label="Positivus — voltar para a página inicial">
           <Image
             src="/images/logo.svg"
@@ -24,7 +24,7 @@ export default function Header() {
         </Link>
 
         <nav className="flex items-center gap-10">
-          <ul className="flex items-center gap-10">
+          <ul className="flex items-center lg:gap-5 xl:gap-10">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
@@ -43,7 +43,7 @@ export default function Header() {
       </div>
 
       {/* Mobile */}
-      <div className="flex items-center justify-between md:hidden">
+      <div className="flex items-center justify-between lg:hidden">
         <Link href="/" aria-label="Positivus — voltar para a página inicial">
           <Image
             src="/images/logo.svg"
@@ -70,14 +70,16 @@ export default function Header() {
           />
           <span
             className="block h-[2px] w-[24px] bg-dark transition-all duration-300"
-            style={isOpen ? { transform: "translateY(-7px) rotate(-45deg)" } : {}}
+            style={
+              isOpen ? { transform: "translateY(-7px) rotate(-45deg)" } : {}
+            }
           />
         </button>
       </div>
 
       {/* Mobile menu aberto */}
       {isOpen && (
-        <nav className="fixed inset-0 z-100 flex flex-col items-center justify-center gap-8 bg-dark md:hidden">
+        <nav className="fixed inset-0 z-100 flex flex-col items-center justify-center gap-8 bg-dark lg:hidden">
           <button
             onClick={() => setIsOpen(false)}
             className="absolute right-[20px] top-[40px] flex flex-col justify-center gap-[5px] p-2"
@@ -111,7 +113,11 @@ export default function Header() {
             ))}
           </ul>
 
-          <Button variant="accent" className="mt-4" onClick={() => setIsOpen(false)}>
+          <Button
+            variant="accent"
+            className="mt-4"
+            onClick={() => setIsOpen(false)}
+          >
             Request a quote
           </Button>
         </nav>

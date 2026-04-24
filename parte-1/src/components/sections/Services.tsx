@@ -9,7 +9,10 @@ interface ServicesProps {
 
 export default function Services({ className }: ServicesProps) {
   return (
-    <section id="services" className={cn("flex flex-col gap-[80px]", className)}>
+    <section
+      id="services"
+      className={cn("flex flex-col gap-[80px]", className)}
+    >
       {/* Cabeçalho da seção */}
       <header className="flex flex-col items-start gap-[40px] md:flex-row md:items-center">
         <SectionLabel>Services</SectionLabel>
@@ -21,7 +24,7 @@ export default function Services({ className }: ServicesProps) {
       </header>
 
       {/* Grid de cards */}
-      <div className="grid grid-cols-1 gap-[40px] md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-[40px] lg:grid-cols-2">
         {services.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { caseStudies } from "@/data/caseStudies";
+import { cn } from "@/lib/utils";
+import { Fragment } from "react";
 
 interface CaseStudiesProps {
   className?: string;
@@ -9,7 +11,10 @@ interface CaseStudiesProps {
 
 export default function CaseStudies({ className }: CaseStudiesProps) {
   return (
-    <section id="use-cases" className={className}>
+    <section
+      id="use-cases"
+      className={cn("flex flex-col gap-[80px]", className)}
+    >
       {/* Cabeçalho */}
       <header className="flex flex-col items-start gap-[40px] md:flex-row md:items-center">
         <SectionLabel>Case Studies</SectionLabel>
@@ -20,12 +25,16 @@ export default function CaseStudies({ className }: CaseStudiesProps) {
       </header>
 
       {/* Card escuro com 3 colunas */}
-      <div className="mt-[80px] rounded-[45px] bg-dark px-[60px] py-[70px]">
-        <div className="flex flex-col items-start gap-0 md:flex-row">
+      {/* Card escuro com 3 colunas */}
+      <div className="rounded-[45px] bg-dark px-[40px] py-[70px] md:px-[60px]">
+        <div className="flex flex-col items-start gap-0 lg:flex-row lg:items-stretch lg:gap-[64px]">
           {caseStudies.map((study, index) => (
-            <div key={study.id} className="flex w-full flex-col items-start md:flex-row md:items-start">
+            <Fragment key={study.id}>
               {/* Coluna de conteúdo */}
-              <div className="flex max-w-full flex-col justify-between gap-[20px] md:max-w-[286px]">
+              <div
+                key={study.id}
+                className="flex w-full max-w-full flex-col justify-between gap-[20px] lg:flex-1"
+              >
                 <p className="text-body text-white">{study.description}</p>
                 <Link
                   href={study.href}
@@ -44,11 +53,15 @@ export default function CaseStudies({ className }: CaseStudiesProps) {
                 </Link>
               </div>
 
-              {/* Divisória — não renderiza após o último item */}
+              {/* Divisória — entre items, não dentro deles */}
               {index < caseStudies.length - 1 && (
-                <div className="mx-0 my-[32px] h-px w-full bg-white md:mx-[64px] md:my-0 md:h-[186px] md:w-px" />
+                <div
+                  key={`divider-${study.id}`}
+                  className="my-[32px] h-px w-full bg-white lg:my-0 lg:h-auto lg:w-px lg:self-stretch"
+                  aria-hidden="true"
+                />
               )}
-            </div>
+            </Fragment>
           ))}
         </div>
       </div>

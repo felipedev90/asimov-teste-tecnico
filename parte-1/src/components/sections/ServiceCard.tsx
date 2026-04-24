@@ -40,13 +40,13 @@ export default function ServiceCard({ service }: ServiceCardProps) {
     <article
       className={cn(
         "flex w-full flex-col items-center justify-between h-auto p-[30px]",
-        "md:h-[310px] md:w-[600px] md:flex-row md:items-center md:p-[50px]",
+        "md:h-[310px] md:flex-row md:items-center md:p-[50px] lg:px-[20px] lg:py-[50px]",
         "rounded-[45px] border border-dark",
         "shadow-[0_5px_0_0_#191A23]",
         styles.card,
       )}
     >
-      <div className="flex h-full w-full flex-col items-center justify-between gap-4 md:w-[221px] md:items-start">
+      <div className="flex h-full w-full min-w-0 flex-1 flex-col items-center justify-between gap-4 md:items-start">
         <h3
           className="flex flex-col text-h3 font-medium"
           aria-label={service.title}
@@ -54,7 +54,10 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           {service.titleLines.map((line) => (
             <span
               key={line}
-              className={cn("w-fit rounded-[7px] px-[7px] py-[5px]", styles.titleTag)}
+              className={cn(
+                "w-fit rounded-[7px] px-[7px] py-[5px]",
+                styles.titleTag,
+              )}
             >
               {line}
             </span>
@@ -85,7 +88,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         height={170}
         aria-hidden="true"
         loading="lazy"
-        className="mt-4 w-[150px] md:mt-0 md:w-[210px]"
+        className="mt-4 w-[150px] shrink-0 md:mt-0 md:w-[170px] xl:w-[210px]"
       />
     </article>
   );
